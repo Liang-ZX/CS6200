@@ -245,7 +245,7 @@ directory.  It contains the files
 * gfserver_main.c (modify to help test) the main file for the Getfile server.
 	Illustrates the use of the gfserver library.
 * gf-student.h (modify and submit) header file for students to modify - submitted for both client and server
-* handler.c - (modify and submit) contains the handler callback that is
+* handler.o - contains an implementation of the handler callback that is
 	registered with the gfserver library.
 * workload.[ch] - (do not modify) a library used by workload generator
 * workload.txt - (modify to help test) a data file indicating what paths should
@@ -317,12 +317,12 @@ exercise. You are **NOT** supposed to use `fork()` to spawn child processes, but
 you should be using the **pthreads** library to create/manage threads. You will have 
 points removed if you don't follow this instruction.*
 
-So far, the Getfile server can only handle a single request at a time.  To
+In Part 1, the Getfile server can only handle a single request at a time.  To
 overcome this limitation, you will make your Getfile server multi-threaded by
-modifying the handler in handler.c and updating gfserver_main.c as needed.  The
-main, i.e. boss, thread will continue listening to the socket and accepting new
-connection requests. New connections will, however, be fully handled by worker
-threads. The pool of worker threads should be initialized to the number of
+implementing your own version of the handler in handler.c and updating gfserver_main.c
+as needed.  The main, i.e. boss, thread will continue listening to the socket and
+accepting new connection requests. New connections will, however, be fully handled by 
+worker threads. The pool of worker threads should be initialized to the number of
 threads specified as a command line argument.  You may need to add additional
 initialization or worker functions in handler.c.  Use extern keyword to make
 functions from handler.c available to gfserver_main.c.  For instance, the main
