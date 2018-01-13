@@ -52,6 +52,8 @@ int main(int argc, char **argv) {
     }
   }
 
+    setbuf(stdout, NULL); // disable buffering
+
     if ((portno < 1025) || (portno > 65535)) {
         fprintf(stderr, "%s @ %d: invalid port number (%d)\n", __FILE__, __LINE__, portno);
         exit(1);

@@ -98,6 +98,8 @@ int main(int argc, char **argv) {
   char *req_path = NULL;
   char local_path[1024];
 
+  setbuf(stdout, NULL); // disable caching
+
   // Parse and set command line arguments
   while ((option_char = getopt_long(argc, argv, "hn:p:s:t:w:x", gLongOptions, NULL)) != -1) {
     switch (option_char) {

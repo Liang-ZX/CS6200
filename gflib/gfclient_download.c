@@ -15,6 +15,7 @@
 
 #include "gfclient-student.h"
 
+#define PATH_BUFFER_SIZE (5120)
 
 #define USAGE                                                                 \
 "usage:\n"                                                                    \
@@ -43,7 +44,7 @@ static void Usage() {
 static void localPath(char *req_path, char *local_path){
   static int counter = 0;
 
-  sprintf(local_path, "%s_%06d", &req_path[1], counter++);
+  snprintf(local_path, PATH_BUFFER_SIZE, "%s_%06d", &req_path[1], counter++);
 }
 
 static FILE* openFile(char *path){
@@ -96,7 +97,9 @@ int main(int argc, char **argv) {
   gfcrequest_t *gfr;
   FILE *file;
   char *req_path;
-  char local_path[5120];
+  char local_path[PATH_BUFFER_SIZE];
+
+  setbuf(stdout, NULL); // disable buffering
 
   // Parse and set command line arguments
   while ((option_char = getopt_long(argc, argv, "l:n:hp:s:x", gLongOptions, NULL)) != -1) {

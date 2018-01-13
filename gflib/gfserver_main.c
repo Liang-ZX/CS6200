@@ -40,6 +40,8 @@ int main(int argc, char **argv) {
   char *content_map_file = "content.txt";
   gfserver_t *gfs;
 
+  setbuf(stdout, NULL); // disable caching
+
   // Parse and set command line arguments
   while ((option_char = getopt_long(argc, argv, "m:p:t:hx", gLongOptions, NULL)) != -1) {
     switch (option_char) {

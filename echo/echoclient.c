@@ -61,6 +61,7 @@ int main(int argc, char **argv)
         }
     }
 
+    setbuf(stdout, NULL); // disable buffering
 
     if ((portno < 1025) || (portno > 65535))
     {

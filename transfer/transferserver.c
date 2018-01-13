@@ -32,6 +32,8 @@ int main(int argc, char **argv)
     int portno = 6200;             /* port to listen on */
     char *filename = "cs6200.txt"; /* file to transfer */
 
+    setbuf(stdout, NULL); // disable buffering
+
     // Parse and set command line arguments
     while ((option_char = getopt_long(argc, argv, "p:hf:x", gLongOptions, NULL)) != -1)
     {

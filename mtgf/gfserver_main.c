@@ -51,6 +51,8 @@ int main(int argc, char **argv) {
   gfserver_t *gfs = NULL;
   int nthreads = 8;
 
+  setbuf(stdout, NULL);
+
   if (signal(SIGINT, _sig_handler) == SIG_ERR){
     fprintf(stderr,"Can't catch SIGINT...exiting.\n");
     exit(EXIT_FAILURE);

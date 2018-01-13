@@ -36,6 +36,8 @@ int main(int argc, char **argv)
     unsigned short portno = 6200;
     char *filename = "6200.txt";
 
+    setbuf(stdout, NULL);
+
     // Parse and set command line arguments
     while ((option_char = getopt_long(argc, argv, "s:p:o:hx", gLongOptions, NULL)) != -1)
     {
