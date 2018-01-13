@@ -36,4 +36,6 @@ gfclient_download_noasan: gfclient_noasan.o workload_noasan.o gfclient_download_
 .PHONY: clean
 
 clean:
+	mv handler.o handler.o-sav
 	rm -fr *.o gfserver_main gfclient_download gfserver_main_noasan gfclient_download_noasan
+	mv handler.o-sav handler.o
