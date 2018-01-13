@@ -1,2 +1,2 @@
-# Set auto carriage return line feed to false.
-* text=false
+# Set .txt files to always be line feed
+*.txt=lf
