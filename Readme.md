@@ -245,7 +245,7 @@ directory.  It contains the files
 * gfserver_main.c (modify to help test) the main file for the Getfile server.
 	Illustrates the use of the gfserver library.
 * gf-student.h (modify and submit) header file for students to modify - submitted for both client and server
-* handler.c - (modify to help test) contains the handler callback that is
+* handler.c - (modify and submit) contains the handler callback that is
 	registered with the gfserver library.
 * workload.[ch] - (do not modify) a library used by workload generator
 * workload.txt - (modify to help test) a data file indicating what paths should

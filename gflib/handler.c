@@ -22,6 +22,7 @@
 //  The arg allows the registration of context that is passed into this routine.
 //  Note: you don't need to use arg. The test code uses it in some cases, but
 //        not in others.
+//  Hint: use content_get to help read your file.
 //
 ssize_t getfile_handler(gfcontext_t *ctx, char *path, void* arg){
 	return -ENOSYS;
