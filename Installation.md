@@ -22,13 +22,13 @@ This and all assignments will be made available on the https://github.gatech.edu
 
 Change to the directory you plan to use for the course.  Then clone this repository with the command
 ```
-git clone https://github.gatech.edu/gios-spr-2017/gios-spring2017-pr1.git
+git clone https://github.gatech.edu/gios-spr-2018/pr1.git
 ```
 
 (If this command fails with a complaint about "server certificate verification failed", then you might need to run 
 
 ```
-GIT_SSL_NO_VERIFY=true git clone --recursive https://github.gatech.edu/gios-spr-2017/gios-spring2017-pr1.git
+GIT_SSL_NO_VERIFY=true git clone --recursive https://github.gatech.edu/gios-spr-2018/pr1.git
 cd pr1
 git config http.sslVerify false
 ```
