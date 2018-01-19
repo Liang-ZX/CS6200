@@ -282,17 +282,17 @@ functions in the gfclient library.
 
 ### gfserver
 The server side interface documented in gfserver.h is inspired by python’s
-built-in httpserver.  The existing code in the files handler.c and
-gfserver_main.c illustrate this usage.  Again, for those not  familiar with
-function pointers in C and callbacks, the interface can be confusing.  The key
-idea is before starting up the server, the user registers a handler callback
-with gfserver library which controls how the request will be handled.  The
-handler callback should not contain any of the socket-level code.  Instead, it
-should use the gfs_sendheader, gfs_send, and potentially the gfs_abort
-functions provided by the gfserver library.  Naturally, the gfserver library
-needs to know which request the handler is working on.  All of this information
-is captured in the opaque pointer passed into the handler, which the handler
-must then pass back to the gfserver library when making these calls.
+built-in httpserver.  The existing code in the file gfserver_main.c illustrates 
+this usage.  Again, for those not familiar with function pointers in C and 
+callbacks, the interface can be confusing.  The key idea is before starting 
+up the server, the user registers a handler callback with gfserver library 
+which controls how the request will be handled.  The handler callback should 
+not contain any of the socket-level code.  Instead, it should use the 
+gfs_sendheader, gfs_send, and potentially the gfs_abort functions provided 
+by the gfserver library.  Naturally, the gfserver library needs to know which 
+request the handler is working on.  All of this information is captured in the 
+opaque pointer passed into the handler, which the handler must then pass back 
+to the gfserver library when making these calls.
 
 ### Submission
 Read the documentation carefully for the requirements.  When you are ready to
